@@ -3,8 +3,8 @@ const envelopeScreen = document.getElementById("envelope-screen");
 const invitation = document.getElementById("invitation");
 const bgMusic = document.getElementById("bgMusic");  
 
-// Interactive Envelope Unfolding
 envelopeWrapper.addEventListener("click", function () {
+    
     if (bgMusic) {
         bgMusic.play().catch(error => {
             console.log("Audio play blocked or failed:", error);
@@ -28,7 +28,6 @@ envelopeWrapper.addEventListener("click", function () {
     }, 1800);
 });
 
-// Real-Time Countdown
 const celebrationDate = new Date("October 24, 2026 15:00:00").getTime();
 
 function updateCountdown() {
@@ -57,7 +56,6 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-// RSVP Interactive Controls
 const rsvpOptions = document.querySelectorAll(".rsvp-option");
 const submitButton = document.getElementById("submitRSVP");
 const guestName = document.getElementById("guestName");
@@ -67,66 +65,15 @@ const responseText = document.getElementById("responseText");
 
 let selectedAnswer = "";
 
-// Option Selection with Dynamic Pulse Effect
 rsvpOptions.forEach(option => {
     option.addEventListener("click", function () {
-        rsvpOptions.forEach(item => {
-            item.classList.remove("selected");
-            item.style.transform = "scale(1)";
-        });
-        
+        rsvpOptions.forEach(item => item.classList.remove("selected"));
         this.classList.add("selected");
-        this.style.transform = "scale(1.03)";
         selectedAnswer = this.dataset.answer;
     });
 });
 
 const RSVP_URL = "https://script.google.com/macros/s/AKfycbwrTzcq_sCi3jp7BurQ-QT-Q4LF5z7s9eijRAOIPVJCtwh3NjFvyM1DQFOynlduyv6b/exec";
-
-// Canvas Confetti FX Trigger
-function launchConfetti() {
-    const canvas = document.createElement("canvas");
-    canvas.style.position = "fixed";
-    canvas.style.top = "0";
-    canvas.style.left = "0";
-    canvas.style.width = "100vw";
-    canvas.style.height = "100vh";
-    canvas.style.pointerEvents = "none";
-    canvas.style.zIndex = "9999";
-    document.body.appendChild(canvas);
-
-    const ctx = canvas.getContext("2d");
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    const particles = Array.from({ length: 80 }).map(() => ({
-        x: Math.random() * canvas.width,
-        y: -10,
-        r: Math.random() * 6 + 4,
-        color: `hsl(${Math.random() * 360}, 100%, 75%)`,
-        vx: (Math.random() - 0.5) * 4,
-        vy: Math.random() * 3 + 2
-    }));
-
-    function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        particles.forEach(p => {
-            p.x += p.vx;
-            p.y += p.vy;
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-            ctx.fillStyle = p.color;
-            ctx.fill();
-        });
-
-        if (particles.some(p => p.y < canvas.height)) {
-            requestAnimationFrame(animate);
-        } else {
-            canvas.remove();
-        }
-    }
-    animate();
-}
 
 submitButton.addEventListener("click", function () {
     const name = guestName.value.trim();
@@ -194,7 +141,6 @@ submitButton.addEventListener("click", function () {
 
         if (selectedAnswer === "Yes, I'll be there!") {
             responseText.innerText = "Yay! I'm so happy you're coming. We'll keep you updated about the meeting place and call time. ✨";
-            launchConfetti();
         } else if (selectedAnswer === "Maybe") {
             responseText.innerText = "No worries! Just let me know once you're sure. I'll keep you updated with the details. ✧";
         } else {
@@ -207,7 +153,6 @@ submitButton.addEventListener("click", function () {
         guestName.disabled = true;
         rsvpOptions.forEach(option => {
             option.style.pointerEvents = "none";
-            option.style.opacity = "0.7";
         });
     }, 1200);
 });

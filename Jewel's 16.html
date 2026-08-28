@@ -1,91 +1,473 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
+
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>You're Invited!</title>
-  <link rel="stylesheet" href="style.css" />
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jewel's Sweet Sixteen ♡</title>
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@300;400;500;600;700&family=Parisienne&display=swap" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
+
+
 <body>
 
-  <!-- Background Audio -->
-  <audio id="bgMusic" loop src="background-music.mp3"></audio>
+<audio id="bgMusic" loop>
+    <source src="CAN'T TAKE MY EYES OFF YOU  Frankie Valli  Smooth Jazz KARAOKE.mp3" type="audio/mpeg">
+</audio>
 
-  <!-- Envelope Screen -->
-  <div id="envelope-screen" class="envelope-screen">
-    <div id="openEnvelope" class="envelope-wrapper">
-      <div class="envelope">
-        <div class="flap"></div>
-        <div class="pocket"></div>
-        <div class="letter">
-          <p>Click to Open</p>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Invitation Main Content -->
-  <main id="invitation" class="invitation">
-    <header class="header">
-      <p class="sub-title">You are cordially invited to celebrate</p>
-      <h1 class="main-title">A Special Day</h1>
-      <p class="date-text">October 24, 2026 • 3:00 PM</p>
-    </header>
+<div class="floating-elements">
 
-    <!-- Countdown Section -->
-    <section class="countdown-section">
-      <h2>Counting Down The Days</h2>
-      <div class="countdown">
-        <div class="time-box">
-          <span id="days">00</span>
-          <p>Days</p>
-        </div>
-        <div class="time-box">
-          <span id="hours">00</span>
-          <p>Hours</p>
-        </div>
-        <div class="time-box">
-          <span id="minutes">00</span>
-          <p>Minutes</p>
-        </div>
-        <div class="time-box">
-          <span id="seconds">00</span>
-          <p>Seconds</p>
-        </div>
-      </div>
-    </section>
+<span>✦</span><span>♡</span><span>✧</span><span>°</span><span>✦</span>
 
-    <!-- RSVP Section -->
-    <section class="rsvp-section">
-      <h2>RSVP</h2>
-      <p>Will you be attending?</p>
+<span>♡</span><span>✧</span><span>°</span><span>⋆</span><span>♡</span>
 
-      <div class="input-group">
-        <input type="text" id="guestName" placeholder="Enter your full name" required />
-      </div>
+</div>
 
-      <div class="rsvp-options">
-        <button type="button" class="rsvp-option" data-answer="Yes, I'll be there!">
-          <span>✨</span> Yes, I'll be there!
-        </button>
-        <button type="button" class="rsvp-option" data-answer="Maybe">
-          <span>✧</span> Maybe
-        </button>
-        <button type="button" class="rsvp-option" data-answer="Sorry, I can't make it">
-          <span>♡</span> Sorry, I can't make it
-        </button>
-      </div>
 
-      <button id="submitRSVP" class="submit-btn">SEND RSVP</button>
 
-      <!-- Response Box -->
-      <div id="rsvpResponse" class="response-box">
-        <h3 id="responseTitle"></h3>
-        <p id="responseText"></p>
-      </div>
-    </section>
-  </main>
 
-  <script src="script.js"></script>
+<section id="envelope-screen">
+
+<div class="intro-text">
+
+<p class="tiny-label">A LITTLE SOMETHING FOR YOU</p>
+
+<h1>You've got mail.</h1>
+
+<p class="instruction">There's a little invitation waiting inside.</p>
+
+</div>
+
+
+
+<div class="envelope-wrapper" id="openEnvelope">
+
+<div class="envelope">
+
+<div class="envelope-back"></div>
+
+<div class="letter-preview"><span>J</span></div>
+
+<div class="envelope-front"></div>
+
+<div class="flap"></div>
+
+<div class="wax-seal">J</div>
+
+</div>
+
+</div>
+
+
+
+<p class="click-text">TAP THE ENVELOPE TO OPEN ♡</p>
+
+</section>
+
+
+
+
+<main id="invitation">
+
+
+<section class="hero">
+
+<div class="hero-decoration">✦</div>
+
+<p class="eyebrow">YOU'RE INVITED TO</p>
+
+<h2>An Advance Celebration</h2>
+
+<div class="script-name">Sweet Sixteen</div>
+
+<div class="name-line">
+
+<span></span><b>JEWEL</b><span></span>
+
+</div>
+
+<p class="hero-message">
+
+Before the actual big day comes, let's have a little celebration —
+
+a little time to chill, unwind, relax, laugh, and make memories together. ♡
+
+</p>
+
+<div class="scroll-indicator">
+
+<span>SCROLL TO DISCOVER</span> ↓
+
+</div>
+
+</section>
+
+
+
+<section class="section countdown-section">
+
+<p class="section-label">THE DAY IS GETTING CLOSER</p>
+
+<h3>Counting down to the celebration</h3>
+
+
+
+<div class="countdown">
+
+<div class="time-box"><strong id="days">00</strong><small>DAYS</small></div>
+
+<div class="colon">:</div>
+
+<div class="time-box"><strong id="hours">00</strong><small>HOURS</small></div>
+
+<div class="colon">:</div>
+
+<div class="time-box"><strong id="minutes">00</strong><small>MINUTES</small></div>
+
+<div class="colon">:</div>
+
+<div class="time-box"><strong id="seconds">00</strong><small>SECONDS</small></div>
+
+</div>
+
+
+
+<p class="countdown-date">OCTOBER 24, 2026</p>
+
+</section>
+
+
+
+<section class="section details-section">
+
+<p class="section-label">SAVE THE DATE</p>
+
+<h3>The little details</h3>
+
+
+
+<div class="details-grid">
+
+<div class="detail-card">
+
+<div class="icon">♡</div>
+
+<span>DATE</span><strong>October 24, 2026</strong>
+
+</div>
+
+<div class="detail-card">
+
+<div class="icon">◷</div>
+
+<span>TIME</span><strong>3:00 PM — 8:00 PM</strong>
+
+</div>
+
+<div class="detail-card">
+
+<div class="icon">⌖</div>
+
+<span>MEETING PLACE</span><strong>Jollibee A. Luna</strong>
+
+<small>Call time: To be announced</small>
+
+</div>
+
+<div class="detail-card">
+
+<div class="icon">♧</div>
+
+<span>VIBE</span><strong>Mini Pool Party</strong>
+
+<small>Chill • Unwind • Relax</small>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="section location-section">
+
+<p class="section-label">WHERE WE'RE GOING</p>
+
+<h3>See you there.</h3>
+
+<p class="location-description">
+
+Our celebration spot is waiting for you. You can open the location directly in Google Maps using the button below.
+
+</p>
+
+
+
+<div class="map-card">
+
+<div class="map-decoration">✦</div>
+
+<div class="map-pin">⌖</div>
+
+<div class="map-overlay">
+
+<p class="map-small">OUR CELEBRATION SPOT</p>
+
+<h4>October 24</h4>
+
+<p>3:00 PM — 8:00 PM</p>
+
+<a href="https://maps.app.goo.gl/sdgruzfSgZNnLzFV6?g_st=ic" target="_blank" rel="noopener noreferrer" class="map-button">
+
+OPEN IN GOOGLE MAPS ↗
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="section meeting-section">
+
+<div class="info-box">
+
+<div class="info-icon">🚗</div>
+
+<div>
+
+<p class="section-label">IMPORTANT TRANSPORTATION NOTE</p>
+
+<h3>Let's meet up first.</h3>
+
+<p>
+
+There will be a designated <b>meeting place</b> so everyone can go together.
+
+This way, hatid and sundo can be done together and everything will be more organized.
+
+</p>
+
+<div class="meeting-details">
+
+<div><span>MEETING PLACE</span><strong>Jollibee A. Luna</strong></div>
+
+<div><span>CALL TIME</span><strong>To be announced</strong></div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<section class="section reassurance-section">
+
+<div class="reassurance-card">
+
+<div class="stars">✦ ✧ ✦ ✧ ✦ </div>
+
+<h3>For the parents ♡</h3>
+
+<p>Just a little heads-up!</p>
+
+<p>My parents will be coming with us, together with my kuya and his girlfriend, so there will be adults accompanying us throughout the celebration.</p>
+
+<p>We will also be giving updates <b>from time to time</b> so everyone can stay informed and parents won't have to worry.</p>
+
+<div class="heart-line">─── ♡ ───</div>
+
+</div>
+
+</section>
+
+
+
+
+<section class="section rsvp-section">
+
+<div class="rsvp-card">
+
+<div class="rsvp-sparkles">✦ ♡ ✦</div>
+
+<p class="section-label">A LITTLE QUESTION</p>
+
+<h3>Will you be there?</h3>
+
+<p class="rsvp-subtitle">I'd really love to know if you can join me for this little celebration. ♡</p>
+
+
+
+<div class="name-input-area">
+
+<label for="guestName">YOUR NAME</label>
+
+<input type="text" id="guestName" placeholder="Type your name..." autocomplete="off">
+
+</div>
+
+
+
+<div class="rsvp-question">
+
+
+<div class="rsvp-options">
+
+<button type="button" class="rsvp-option" data-answer="Yes, I'll be there!">
+
+<span>♡</span><strong>Yes!</strong><small>I'll be there ✨</small>
+
+</button>
+
+<button type="button" class="rsvp-option" data-answer="Maybe">
+
+<span>✧</span><strong>Maybe</strong><small>I'll let you know</small>
+
+</button>
+
+<button type="button" class="rsvp-option" data-answer="Sorry, I can't make it">
+
+<span>☁</span><strong>Can't make it</strong><small>I'll miss it ♡</small>
+
+</button>
+
+</div>
+
+<button type="button" id="submitRSVP" class="submit-rsvp">SEND MY RESPONSE ♡</button>
+
+</div>
+
+
+
+<div class="rsvp-response" id="rsvpResponse">
+
+<div class="response-icon">♡</div>
+
+<h4 id="responseTitle">Thank you!</h4>
+
+<p id="responseText">Your response has been recorded.</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+      
+        <section class="section contact-section">
+            <div class="contact-card">
+                <div class="stars">✦ 💬 ✦</div>
+                <p class="section-label">GET IN TOUCH</p>
+                <h3>Have questions or concerns?</h3>
+                <p class="contact-subtitle-text">
+                    Feel free to send us a message anytime! You can reach out directly to me or to my parents. ♡
+                </p>
+
+                <div class="contact-grid">
+                    
+                    <div class="contact-person-card highlight-card">
+					<div class="person-info">
+                            <strong>Jewel</strong>
+                            <small>Celebrant</small>
+                            <a href="tel:0939 144 7316" class="contact-link">✆ 0939 144 7316 </a>
+                            <a href="https://www.facebook.com/jewel.ramos.1297/" target="_blank" rel="noopener noreferrer" class="contact-link fb-link">💬 Facebook Profile</a>
+                           <a href="https://m.me/jewel.ramos.1297" target="_blank" rel="noopener noreferrer" class="contact-link messenger-link">✉ Send Messenger Message</a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="contact-person-card">
+                        <div class="person-info">
+                            <strong>Mary Lou Ramos</strong>
+                            <small>Mother</small>
+                            <a href="tel:09328468907" class="contact-link">✆ 0932 846 8907 (Primary)</a>
+                            <a href="tel:09190072375" class="contact-link">✆ 0919 007 2375 (Secondary)</a>
+                            <a href="https://www.facebook.com/marylou.ramos.54" target="_blank" rel="noopener noreferrer" class="contact-link fb-link">💬 Facebook Profile</a>
+							<a href="https://m.me/marylou.ramos.54" target="_blank" rel="noopener noreferrer" class="contact-link messenger-link">✉ Send Messenger Message</a>
+                        </div>
+                    </div>
+
+                  
+                    <div class="contact-person-card">
+					<div class="person-info">
+                            <strong>Pablo Ramos</strong>
+                            <small>Father</small>
+                            <a href="tel:09257882715" class="contact-link">✆ 0925 788 2715</a>
+                            <a href="https://www.facebook.com/pablo.ramos.552848" target="_blank" rel="noopener noreferrer" class="contact-link fb-link">💬 Facebook Profile</a>
+							<a href="https://m.me/pablo.ramos.552848" target="_blank" rel="noopener noreferrer" class="contact-link messenger-link">✉ Send Messenger Message</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="heart-line">─── ♡ ───</div>
+            </div>
+        </section>
+
+<section class="final-section">
+
+<div class="final-content">
+
+<p class="section-label">ONE LAST THING</p>
+
+<h2>Nothing too fancy.</h2>
+
+<div class="final-script">Just good vibes.</div>
+
+<p>It's only a mini pool party — a little time to chill, unwind, relax, laugh, and enjoy each other's company before another chapter begins.</p>
+
+<div class="final-date">OCTOBER 24 · 2026</div>
+
+<div class="final-signature">— Jewel ♡</div>
+
+</div>
+
+</section>
+
+
+
+<footer>made with ♡ for Jewel's Sweet Sixteen</footer>
+
+</main>
+
+
+
+<iframe name="rsvpFrame" id="rsvpFrame" style="display:none;"></iframe>
+
+
+
+<script src="script.js"></script>
+
 </body>
+
+
+
 </html>
